@@ -1,5 +1,6 @@
 body {
-  background-image: url('../imagenes/fondo.png');
+  background-image: url('../imagenes/fondo.jpg');
+  background-size: cover;
 }
 
 canvas {
@@ -8,12 +9,13 @@ canvas {
   margin-top: calc(50vh - 286px);
 }
 
-.boton-recargar {
-  margin: auto;
-  display: flex;
-  background: none;
-  border: none;
-  color: white;
-  font-family: monospace;
-  visibility: hidden;
+.bottom {
+  position: absolute;
+  text-align: center;
+  bottom: 10px;
+  color: #FFF;
+  width: 100%;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
 }

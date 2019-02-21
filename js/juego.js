@@ -15,17 +15,14 @@ var Juego = {
 
   obstaculosCarretera: [
     //Acá se agregan los obstaculos visibles.
-    new Obstaculo('imagenes/valla_horizontal.png', 110, 100, 30, 30, 1),
+    new Obstaculo('imagenes/valla_horizontal.png', 360, 110, 30, 30, 1),
     new Obstaculo('imagenes/valla_horizontal.png', 150, 420, 30, 30, 1),
-    new Obstaculo('imagenes/valla_horizontal.png', 70, 450, 30, 30, 1),
+    new Obstaculo('imagenes/valla_horizontal.png', 70, 280, 30, 30, 1),
     new Obstaculo('imagenes/valla_horizontal.png', 100, 220, 30, 30, 1),
-    new Obstaculo('imagenes/valla_horizontal.png', 150, 450, 30, 30, 1),
-    new Obstaculo('imagenes/valla_vertical.png', 180, 470, 30, 30, 1),
-    new Obstaculo('imagenes/valla_vertical.png', 500, 450, 30, 30, 1),
+    new Obstaculo('imagenes/valla_vertical.png', 380, 240, 30, 30, 1),
+    new Obstaculo('imagenes/valla_vertical.png', 550, 450, 30, 30, 1),
     new Obstaculo('imagenes/bache.png', 175, 280, 30, 30, 2),
-    new Obstaculo('imagenes/bache.png', 325, 480, 30, 30, 2),
-    new Obstaculo('imagenes/bache.png', 500, 125, 30, 30, 2),
-    new Obstaculo('imagenes/bache.png', 825, 420, 30, 30, 2),
+    new Obstaculo('imagenes/bache.png', 325, 450, 30, 30, 2),
     new Obstaculo('imagenes/auto_verde_abajo.png', 130, 245, 15, 30, 3),
     new Obstaculo('imagenes/auto_verde_abajo.png', 832, 380, 15, 30, 3),
     new Obstaculo('imagenes/auto_verde_derecha.png', 380, 485, 30, 15, 3)
@@ -71,7 +68,7 @@ Juego.iniciarRecursos = function() {
   Resources.load([
     'imagenes/mapa.png',
     'imagenes/gameover.png',
-    'imagenes/Splash.png',
+    'imagenes/ciudadzombie_main.png',
     'imagenes/bache.png',
     'imagenes/tren_horizontal.png',
     'imagenes/tren_vertical.png',
@@ -249,7 +246,7 @@ Juego.dibujarFondo = function() {
 
   // Si se gano el juego hay que mostrar el mensaje de ganoJuego de fondo
   else if (this.ganoJuego()) {
-    Dibujante.dibujarImagen('imagenes/Splash.png', 190, 113, 500, 203);
+    Dibujante.dibujarImagen('imagenes/ciudadzombie_main.png', 0, 0, this.anchoCanvas, this.altoCanvas);
     document.getElementById('reiniciar').style.visibility = 'visible';
   } else {
     Dibujante.dibujarImagen('imagenes/mapa.png', 0, 5, this.anchoCanvas, this.altoCanvas);
